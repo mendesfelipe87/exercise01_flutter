@@ -8,10 +8,9 @@ class CounterCubit extends HydratedCubit<CounterState> {
   CounterCubit() : super(CounterState.initial());
 
   Future<void> countValue() async {
-    final currentEvent = InitiatedCounterEvent();
     emit(state.copyWith(
       counter: state.counter + 1,
-      counterEvent: currentEvent,
+      counterEvent: "InitiatedCounterEvent",
     ));
   }
 

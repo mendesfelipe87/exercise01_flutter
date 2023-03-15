@@ -22,7 +22,7 @@ class _CountPageState extends State<CountPage> with WidgetsBindingObserver {
 
     return BlocBuilder<CounterCubit, CounterState>(builder: (context, state) {
       final CounterCubit counterCubit = context.read<CounterCubit>();
-      int _counter = counterCubit.state.counter;
+      int _counter = state.counter;
 
       if (Platform.isAndroid) {
         return Scaffold(
